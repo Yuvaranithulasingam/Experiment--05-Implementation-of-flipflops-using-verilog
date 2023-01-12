@@ -107,34 +107,76 @@ Q(t+1)=T′Q(t)+TQ(t)′
 
 
 ### PROGRAM 
+```
+module SRflipflop(s,r,clock,q,qbar);
+input s,r,clock;
+output q,qbar;
+wire x,y;
+nand(x,s,clock);
+nand(y,r,clock);
+nand(q,x,Qbar);
+nand(Qbar,y,q);
+endmodule
+```
+```
+module Dflipflop(D,clock,Q,Qbar);
+input D,clock;
+output Q,Qbar;
+assign Dbar = ~D;
+wire X,Y;
+nand(X,D,clock);
+nand(Y,Dbar,clock);
+nand(Q,X,Qbar);
+nand(Qbar,Y,Q);
+endmodule
+```
+```
+module JKflipflop(J,K,clock,Q,Qbar);
+input J,K,clock;
+output Q,Qbar;
+wire P,S;
+nand(P,J,clock,Qbar);
+nand(S,K,clock,Q);
+nand(Q,P,Qbar);
+nand(Qbar,S,Q);
+endmodule
+```
+```
+module Tflipflop(T,clock,Q,Qbar);
+input T,clock;
+output Q,Qbar;
+wire A,B;
+nand(A,T,clock,Qbar);
+nand(B,T,clock,Q);
+nand(Q,A,Qbar);
+nand(Qbar,B,Q);
+endmodule
+```
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: Yuvarani T
+RegisterNumber:  22009033
 */
-
-
-
-
-
-
 ### RTL LOGIC FOR FLIPFLOPS 
 
+![Screenshot_20230110_134142](https://user-images.githubusercontent.com/121418522/212075379-773f6730-75ac-424d-b605-81ade97f7244.png)
 
+![Screenshot (24)](https://user-images.githubusercontent.com/121418522/212079476-f5dcda4b-b39b-456d-bf29-e532c7941e1d.png)
 
+![Screenshot (17)](https://user-images.githubusercontent.com/121418522/212079879-34e854d4-efbd-409e-b80f-22b8d48a5a94.png)
 
+![Screenshot (26)](https://user-images.githubusercontent.com/121418522/212084901-36ccbddc-f598-4ba5-90f5-df0273c951f9.png)
 
+### TIMING DIGRAMS FOR FLIP FLOPS
 
+![Screenshot_20230110_140207](https://user-images.githubusercontent.com/121418522/212075452-4332f900-3e0e-423e-89ad-e9989f01bf59.png)
 
+![Screenshot (25)](https://user-images.githubusercontent.com/121418522/212079578-5e9d6d4f-0620-4fa4-b0ff-c6278c60a95a.png)
 
+![Screenshot (18)](https://user-images.githubusercontent.com/121418522/212080001-8cb1aebf-2f61-4813-8874-4fb2b7469f12.png)
 
-### TIMING DIGRAMS FOR FLIP FLOPS 
-
-
-
-
-
-
+![Screenshot (27)](https://user-images.githubusercontent.com/121418522/212085015-01d9c236-0526-4ad7-883f-4ebdff7449c1.png)
 
 
 ### RESULTS 
+all the flipflops are done successfully.
