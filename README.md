@@ -159,6 +159,7 @@ endmodule
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
 Developed by: Yuvarani T
+
 RegisterNumber:  22009033
 */
 ### RTL LOGIC FOR FLIPFLOPS 
@@ -170,6 +171,15 @@ RegisterNumber:  22009033
 ![Screenshot (17)](https://user-images.githubusercontent.com/121418522/212079879-34e854d4-efbd-409e-b80f-22b8d48a5a94.png)
 
 ![Screenshot (26)](https://user-images.githubusercontent.com/121418522/212084901-36ccbddc-f598-4ba5-90f5-df0273c951f9.png)
+
+### TRUTH TABLE FOR FLIPFLOPS
+![TRUTH TABLE (SR)](https://user-images.githubusercontent.com/121418522/213161728-4847ab42-de9d-4483-b2cd-4ae8363b24f9.png)
+
+![TRUTH TABLE FOR D](https://user-images.githubusercontent.com/121418522/213161831-d6090d5e-3b8f-437d-8092-ca7d2d267c19.png)
+
+![JK TRUTH TABLE](https://user-images.githubusercontent.com/121418522/213161880-1c4e6960-c043-4edf-9256-b2c6ab96e351.png)
+
+![T TRUTH TABLE](https://user-images.githubusercontent.com/121418522/213161962-4d45ee10-6c1c-4502-bbbf-d05104b3af1d.png)
 
 ### TIMING DIGRAMS FOR FLIP FLOPS
 
